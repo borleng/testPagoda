@@ -1,0 +1,33 @@
+	if not exist "./" mkdir "."
+	cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\nmC.tmp
+main.cpp
+.\main.cpp(103) : warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+        c:\Program Files\Microsoft Visual Studio 10.0\VC\INCLUDE\conio.h(128)ÿ: voir la d‚claration de 'getch'
+.\main.cpp(106) : warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+        c:\Program Files\Microsoft Visual Studio 10.0\VC\INCLUDE\conio.h(128)ÿ: voir la d‚claration de 'getch'
+	cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\nmD.tmp
+Rges.c
+Rges.c(85) : warning C4013: 'Mf500PcdConfig' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(85) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(99) : warning C4127: l'expression conditionnelle est une constante
+Rges.c(103) : warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+        c:\Program Files\Microsoft Visual Studio 10.0\VC\INCLUDE\conio.h(128)ÿ: voir la d‚claration de 'getch'
+Rges.c(106) : warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+        c:\Program Files\Microsoft Visual Studio 10.0\VC\INCLUDE\conio.h(128)ÿ: voir la d‚claration de 'getch'
+Rges.c(114) : warning C4013: 'Mf500PiccRequest' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(114) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(116) : warning C4013: 'Mf500PiccAnticoll' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(116) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(118) : warning C4013: 'Mf500PiccSelect' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(118) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(152) : warning C4013: 'Mf500HostCodeKey' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(153) : warning C4013: 'Mf500PiccAuthKey' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(153) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(163) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(173) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(183) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(209) : warning C4013: 'Mf500PiccRead' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+Rges.c(209) : warning C4244: '='ÿ: conversion de 'int' en 'short', perte possible de donn‚es
+Rges.c(236) : warning C4013: 'Mf500PiccHalt' non d‚fini(e)ÿ; extern retournant int pris par d‚faut
+	link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\nmE.tmp
+LINK : fatal error LNK1181: impossible d'ouvrir le fichier en entrée 'CommonLib.lib'

@@ -1,0 +1,93 @@
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+OUTDIR=.
+INTDIR=.
+
+ALL : "$(OUTDIR)\Rges.exe"
+
+CLEAN :
+	-@erase "$(INTDIR)\main.obj"
+	-@erase "$(INTDIR)\Rges.obj"
+	-@erase "$(INTDIR)\vc60.idb"
+	-@erase "$(OUTDIR)\Rges.exe"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MT /W4 /GX /O2 /I "..\..\include" /I "." \
+         /I "..\..\..\include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" \
+		 /D "_MBCS" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+RSC=rc.exe
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\Rges.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=kernel32.lib MfRc500.lib CommonLib.lib user32.lib gdi32.lib \
+             winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib \
+			 oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo \
+			 /subsystem:console /incremental:no /pdb:"$(OUTDIR)\Rges.pdb" \
+			 /machine:I386 /out:"$(OUTDIR)\Rges.exe" \
+			 /libpath:"..\..\Binaries\Release" 
+
+LINK32_OBJS= \
+	"$(INTDIR)\main.obj" \
+	"$(INTDIR)\Rges.obj"
+
+"$(OUTDIR)\Rges.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+SOURCE=.\main.cpp
+
+CPP_SWITCHES=/nologo /MT /W3 /GX /O2 /I "..\..\include" /I "." \
+             /I "..\..\..\include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" \
+			 /D "_MBCS" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c 
+
+"$(INTDIR)\main.obj" : $(SOURCE) "$(INTDIR)"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+SOURCE=.\Rges.c
+
+"$(INTDIR)\Rges.obj" : $(SOURCE) "$(INTDIR)"
+
