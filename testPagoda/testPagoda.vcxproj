@@ -56,7 +56,16 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>MfRc500.dll;Rd700.dll;Usbdll.dll;CommonLib.dll;HostRdCom.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AssemblyLinkResource>
+      </AssemblyLinkResource>
+      <Profile>false</Profile>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <PreventDllBinding>true</PreventDllBinding>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
