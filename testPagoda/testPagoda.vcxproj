@@ -66,6 +66,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <PreventDllBinding>true</PreventDllBinding>
+      <AdditionalDependencies>CommonLib.dll;HostRdCom.dll;MfRc500.dll;Rd700.dll;Usbdll.dll;CommonLib.lib;MfRc500.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -86,12 +87,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\CommonLib.dll" />
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\HostRdCom.dll" />
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\MfRc500.dll" />
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\Rd700.dll" />
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\Usbdll.dll" />
+    <None Include="CommonLib.dll" />
+    <None Include="HostRdCom.dll" />
+    <None Include="MfRc500.dll" />
+    <None Include="Rd700.dll" />
     <None Include="ReadMe.txt" />
+    <None Include="Usbdll.dll" />
+    <None Include="vc100.idb" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonLib.h">
@@ -154,8 +156,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\CommonLib.lib" />
-    <Library Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\MfRc500.lib" />
+    <Library Include="CommonLib.lib" />
+    <Library Include="MfRc500.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

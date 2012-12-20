@@ -12,19 +12,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\MfRc500.dll">
+    <None Include="CommonLib.dll">
       <Filter>Fichiers d%27en-tête</Filter>
     </None>
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\CommonLib.dll">
+    <None Include="HostRdCom.dll">
       <Filter>Fichiers d%27en-tête</Filter>
     </None>
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\HostRdCom.dll">
+    <None Include="MfRc500.dll">
       <Filter>Fichiers d%27en-tête</Filter>
     </None>
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\Rd700.dll">
+    <None Include="Rd700.dll">
       <Filter>Fichiers d%27en-tête</Filter>
     </None>
-    <None Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\Usbdll.dll">
+    <None Include="Usbdll.dll">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
+    <None Include="vc100.idb">
       <Filter>Fichiers d%27en-tête</Filter>
     </None>
   </ItemGroup>
@@ -64,24 +67,24 @@
     <ClCompile Include="testPagoda.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CommonLib.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="LibInfo.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
     <ClCompile Include="Rges.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="CommonLib.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LibInfo.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\MfRc500.lib">
+    <Library Include="CommonLib.lib">
       <Filter>Fichiers d%27en-tête</Filter>
     </Library>
-    <Library Include="..\..\..\..\..\Bureau\PCDevelopment\ProgramSample\Rges\CommonLib.lib">
+    <Library Include="MfRc500.lib">
       <Filter>Fichiers d%27en-tête</Filter>
     </Library>
   </ItemGroup>
